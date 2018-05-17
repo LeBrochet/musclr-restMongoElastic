@@ -13,13 +13,13 @@ public class User {
 	private String password;
 	private String username;
 	private Date birthday;
-	private String level;
 	private String gender;
+	private String level;
+	private String image;
 	private List<Integer> events;
 	private List<String> friends;
 	private List<Integer> workout;
 	private List<Integer> tokens;
-	private String image;
 	public String getId() {
 		return id;
 	}
@@ -92,35 +92,31 @@ public class User {
 	public void setImage(String image) {
 		this.image = image;
 	}
+
 	@Override
 	public String toString() {
-		return "Book [id=" + id + ", email=" + email + ", password=" + password + ", username=" + username
-				+ ", birthday=" + birthday + ", level=" + level + ", gender=" + gender + ", events=" + events
-				+ ", friends=" + friends + ", workout=" + workout + ", tokens=" + tokens + ", image=" + image + "]";
+		return "User [id=" + id + ", email=" + email + ", password=" + password + ", username=" + username
+				+ ", birthday=" + birthday + ", gender=" + gender + ", level=" + level + ", image=" + image
+				+ ", events=" + events + ", friends=" + friends + ", workout=" + workout + ", tokens=" + tokens + "]";
 	}
-	public User(String id, String email, String password, String username, Date birthday, String level, String gender,
-			List<Integer> events, List<String> friends, List<Integer> workout, List<Integer> tokens, String image) {
+	public User(String id, String email, String password, String username, Date birthday, String gender, String level,
+			String image, List<Integer> events, List<String> friends, List<Integer> workout, List<Integer> tokens) {
 		super();
 		this.id = id;
 		this.email = email;
 		this.password = password;
 		this.username = username;
 		this.birthday = birthday;
-		this.level = level;
 		this.gender = gender;
+		this.level = level;
+		this.image = image;
 		this.events = events;
 		this.friends = friends;
 		this.workout = workout;
 		this.tokens = tokens;
-		this.image = image;
 	}
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-    
-    
-    
-    
 }

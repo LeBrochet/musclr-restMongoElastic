@@ -33,10 +33,10 @@ public class UserDao {
     this.restHighLevelClient = restHighLevelClient;
   }
   
-  public User insertBook(User book){
-	  book.setId(UUID.randomUUID().toString());
-	  Map dataMap = objectMapper.convertValue(book, Map.class);
-	  IndexRequest indexRequest = new IndexRequest(INDEX, TYPE, book.getId())
+  public User insertUser(User user){
+	  user.setId(UUID.randomUUID().toString());
+	  Map dataMap = objectMapper.convertValue(user, Map.class);
+	  IndexRequest indexRequest = new IndexRequest(INDEX, TYPE, user.getId())
 	                .source(dataMap);
 	  try {
 	    IndexResponse response = restHighLevelClient.index(indexRequest);
@@ -45,10 +45,13 @@ public class UserDao {
 	  } catch (java.io.IOException ex){
 	    ex.getLocalizedMessage();
 	  }
-	  return book;
+	  return user;
 	}
   
-  public Map<String, Object> getBookById(String id){
+  
+  
+  
+  public Map<String, Object> getUserById(String id){
 	  GetRequest getRequest = new GetRequest(INDEX, TYPE, id);
 	  GetResponse getResponse = null;
 	  try {

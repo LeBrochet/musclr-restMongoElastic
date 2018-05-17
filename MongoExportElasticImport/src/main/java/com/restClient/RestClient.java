@@ -1,9 +1,5 @@
 package com.restClient;
 
-import java.net.URI;
-import java.util.ArrayList;
-import java.util.Date;
-
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -38,4 +34,8 @@ public class RestClient {
 		System.out.println("//////" + uri);
 //		System.out.println(uri.getPath());
 	}
+	
+	
+	
+	
 }

@@ -9,20 +9,22 @@ import java.util.Map;
 @RequestMapping("/users")
 public class UserController {
 
-    private UserDao bookDao;
+    private UserDao userDao;
 
-    public UserController(UserDao bookDao) {
-        this.bookDao = bookDao;
+    public UserController(UserDao userDao) {
+        this.userDao = userDao;
     }
     
     @PostMapping
-    public User insertBook(@RequestBody User book) throws Exception {
-      return bookDao.insertBook(book);
+    public User insertBook(@RequestBody User user) throws Exception {
+      return userDao.insertUser(user);
     }
+    
+    
     
     @GetMapping("/{id}")
     public Map<String, Object> getBookById(@PathVariable String id){
-      return bookDao.getBookById(id);
+      return userDao.getUserById(id);
     }
     
 }
