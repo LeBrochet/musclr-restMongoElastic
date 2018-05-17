@@ -1,22 +1,22 @@
 package com.journaldev.elasticsearch.controller;
-import com.journaldev.elasticsearch.model.Book;
-import com.journaldev.elasticsearch.dao.BookDao;
+import com.journaldev.elasticsearch.model.User;
+import com.journaldev.elasticsearch.dao.UserDao;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
 @RestController
 @RequestMapping("/users")
-public class BookController {
+public class UserController {
 
-    private BookDao bookDao;
+    private UserDao bookDao;
 
-    public BookController(BookDao bookDao) {
+    public UserController(UserDao bookDao) {
         this.bookDao = bookDao;
     }
     
     @PostMapping
-    public Book insertBook(@RequestBody Book book) throws Exception {
+    public User insertBook(@RequestBody User book) throws Exception {
       return bookDao.insertBook(book);
     }
     

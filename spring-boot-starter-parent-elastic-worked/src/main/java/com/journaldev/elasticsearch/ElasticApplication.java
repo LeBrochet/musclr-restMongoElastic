@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @EnableAutoConfiguration
-public class Elastic6Application {
+public class ElasticApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(Elastic6Application.class, args);
+		SpringApplication.run(ElasticApplication.class, args);
 	}
 }

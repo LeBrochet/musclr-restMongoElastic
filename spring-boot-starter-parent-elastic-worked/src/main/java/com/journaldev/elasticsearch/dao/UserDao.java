@@ -1,6 +1,6 @@
 package com.journaldev.elasticsearch.dao;
 
-import com.journaldev.elasticsearch.model.Book;
+import com.journaldev.elasticsearch.model.User;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.elasticsearch.ElasticsearchException;
@@ -21,19 +21,19 @@ import java.util.Map;
 import java.util.UUID;
 
 @Repository
-public class BookDao {
+public class UserDao {
 
   private final String INDEX = "userdata";
   private final String TYPE = "users";  
   private RestHighLevelClient restHighLevelClient;
   private ObjectMapper objectMapper;
 
-  public BookDao( ObjectMapper objectMapper, RestHighLevelClient restHighLevelClient) {
+  public UserDao( ObjectMapper objectMapper, RestHighLevelClient restHighLevelClient) {
     this.objectMapper = objectMapper;
     this.restHighLevelClient = restHighLevelClient;
   }
   
-  public Book insertBook(Book book){
+  public User insertBook(User book){
 	  book.setId(UUID.randomUUID().toString());
 	  Map dataMap = objectMapper.convertValue(book, Map.class);
 	  IndexRequest indexRequest = new IndexRequest(INDEX, TYPE, book.getId())

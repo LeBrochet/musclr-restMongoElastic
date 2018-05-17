@@ -6,7 +6,7 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
-public class Book {
+public class User {
 
 	private String id;
 	private String email;
@@ -98,7 +98,7 @@ public class Book {
 				+ ", birthday=" + birthday + ", level=" + level + ", gender=" + gender + ", events=" + events
 				+ ", friends=" + friends + ", workout=" + workout + ", tokens=" + tokens + ", image=" + image + "]";
 	}
-	public Book(String id, String email, String password, String username, Date birthday, String level, String gender,
+	public User(String id, String email, String password, String username, Date birthday, String level, String gender,
 			List<Integer> events, List<String> friends, List<Integer> workout, List<Integer> tokens, String image) {
 		super();
 		this.id = id;
@@ -114,7 +114,7 @@ public class Book {
 		this.tokens = tokens;
 		this.image = image;
 	}
-	public Book() {
+	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
