@@ -1,0 +1,4 @@
+/home/lebrochet/workspace/MongoSpringData/spring-boot-starter-parent-elastic-6/src/main/java/com/journaldev/elasticsearch/model/Book.java
+/home/lebrochet/workspace/MongoSpringData/spring-boot-starter-parent-elastic-6/src/main/java/com/journaldev/elasticsearch/config/ElasticSearchConfiguration.java
+/home/lebrochet/workspace/MongoSpringData/spring-boot-starter-parent-elastic-6/src/main/java/com/journaldev/elasticsearch/dao/BookDao.java
+/home/lebrochet/workspace/MongoSpringData/spring-boot-starter-parent-elastic-6/src/main/java/com/journaldev/elasticsearch/controller/BookController.java
